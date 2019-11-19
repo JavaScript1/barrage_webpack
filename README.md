@@ -24,7 +24,7 @@ to bundle your application
 ##### 全局 barrageController 类
 
 ```
-    let barrage = barrageController.getInstance({
+    barrageController.getInstance({
         <!-- 画布 必填-->
         canvas:document.getElementById('barrage'),
         <!-- 弹幕文字大小 非必填-->
@@ -34,7 +34,8 @@ to bundle your application
         <!-- 弹幕移动速度 非必填-->
         step: 1,
         <!-- 计时器间隔 非必填-->
-        interval = 15, 
+        interval = 15
+    });
 ```
 
 ##### 获取关于弹幕的一些信息
