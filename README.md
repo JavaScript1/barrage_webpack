@@ -1,26 +1,23 @@
-# 🚀 Welcome to your new awesome project!
-
-This project has been created using **webpack scaffold**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
-
-#### 弹幕插件（Demo）
+## 弹幕插件（Demo）
 
 #### 基本条件
     基于你的画布和初始化的基本配置进行调节弹幕的总行数
     基于你画布的宽度进行调节弹幕总行驶距离
-    画布的背景和基本属性 由你设置插件不会进行干扰和处理
+    画布的背景和基本属性由你设置插件不会进行干扰和处理
+    
+    基于webpack打包 需要install下载依赖
 
+    通过 npm run start 启动项目
+    
+    打包指令 
+        npm run build 
+        
+    弹幕插件有自己的弹幕存储器 多余的弹幕会存储进弹幕存储器中
+    弹幕出现的行 即Y轴坐标 是有一个行管理器进行分配 它控制下以条弹幕出现的行数
+    如果当前所有行的入口都由弹幕在运行 那么下一条弹幕会被压入存储器中
+    
+    存储器中的弹幕会被优先获取并被行管理器分配
+        
 #### 已知问题
 
 速度和字体变大的话 会造成弹幕在移动过程中没有完全清空 
@@ -29,15 +26,15 @@ to bundle your application
 
 ```
     barrageController.getInstance({
-        <!-- 画布 必填-->
+        /* 画布 必填 */
         canvas:document.getElementById('barrage'),
-        <!-- 弹幕文字大小 非必填-->
-        fontSize: 30,
-        <!-- 弹幕颜色 非必填-->
-        fillStyle: 'blue',
-        <!-- 弹幕移动速度 非必填-->
+        /* 弹幕文字大小 非必填 */
+        fontSize: 20,
+        /* 弹幕颜色 非必填 */
+        fillStyle: '#000',
+        /* 弹幕移动速度 非必填 */
         step: 1,
-        <!-- 计时器间隔 非必填-->
+        /* 计时器间隔 非必填 */
         interval = 15
     });
 ```
