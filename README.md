@@ -14,14 +14,18 @@ yarn build
 
 to bundle your application
 
-##### 弹幕插件（Demo）
+#### 弹幕插件（Demo）
 
+#### 基本条件
+    基于你的画布和初始化的基本配置进行调节弹幕的总行数
+    基于你画布的宽度进行调节弹幕总行驶距离
+    画布的背景和基本属性 由你设置插件不会进行干扰和处理
 
 #### 已知问题
 
 速度和字体变大的话 会造成弹幕在移动过程中没有完全清空 
 
-##### 全局 barrageController 类
+#### 全局 barrageController 类
 
 ```
     barrageController.getInstance({
@@ -38,7 +42,7 @@ to bundle your application
     });
 ```
 
-##### 获取关于弹幕的一些信息
+#### 获取关于弹幕的一些信息
 
 ```
     /* 获取弹幕存储器中弹幕个数 */
