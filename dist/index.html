@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<style>
+    #barrageBox{
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #barrage{
+        background-color: #eee;
+    }
+</style>
+<body>
+    <div id="barrageBox">
+        <canvas id="barrage" width="800" height="600"></canvas>
+        <input id='text' type="text" value="测试文本">
+        <button id="btn"> click_meeeee </button>
+    </div>
+<script type="text/javascript" src="main.209ed1a8b6db1922dd39.js"></script></body>
+<script>
+    barrageController.getInstance({
+        canvas:document.getElementById('barrage'),
+        fontSize: 20,
+        fillStyle: '#000',
+        step: 1
+    });
+
+    btn.onclick = () => {
+        barrageController.getInstance().textInput( text.value );
+    }
+</script>
+</html>       

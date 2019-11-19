@@ -151,5 +151,3 @@ class barrageController {
     }
 }
 window.barrageController = barrageController;
-
-
