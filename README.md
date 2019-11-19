@@ -42,6 +42,15 @@ to bundle your application
     });
 ```
 
+#### 使用
+```
+    当初始化完毕之后使用 textInput 方法并传递弹幕内容
+    barrageController.getInstance().textInput('弹幕文本');
+    一般配合 click 事件一起使用
+    你也可以使用计时器不断压入 来进行压力测试
+    
+```
+
 #### 获取关于弹幕的一些信息
 
 ```
@@ -51,4 +60,3 @@ to bundle your application
     barrageController.getInstance().textCurrent 
 
 ```
-
