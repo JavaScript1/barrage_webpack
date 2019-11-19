@@ -51,13 +51,11 @@ class barrageController {
     static getInstance( config ){
         if ( barrageController.instance === undefined ){
             barrageController.instance = new barrageController( config )
+            if( barrageController.instance.configDone ){
+                /* 当验证 config通过后 */
+                barrageController.instance.barrageInit();
+            };
         };
-        
-        if( barrageController.instance.configDone ){
-            /* 当验证 config通过后 */
-            barrageController.instance.barrageInit();
-        };
-
         return barrageController.instance;
     }
     get ctx(){
@@ -155,31 +153,3 @@ class barrageController {
 window.barrageController = barrageController;
 
 
-
-
-if( document.getElementById('barrage') ){
-    let barrage = barrageController.getInstance({
-        canvas:document.getElementById('barrage'),
-        fontSize: 30,
-        fillStyle: 'blue',
-        step: 1
-    });
-
-    let timer = null;
-    let timerFlat = false;
-    document.getElementById('btn').addEventListener( 'click' , e => {
-
-        if( timerFlat === false ){
-            timerFlat = true;
-            timer = setInterval( () => {
-                barrage.textInput( text.value );    
-            } , 20);
-        }else{
-            timerFlat = false;
-            clearInterval( timer );
-        }
-        
-    });
-    // barrageController.getInstance().textInput( '123' );
-    document.getElementById('btn').click();
-}
