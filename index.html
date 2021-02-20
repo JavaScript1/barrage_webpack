@@ -22,5 +22,18 @@
         <button id="btn"> click_meeeee </button>
     </div>
 </body>
+<script type="text/javascript" src="main.209ed1a8b6db1922dd39.js"></script></body>
+<script>
+    barrageController.getInstance({
+        canvas:document.getElementById('barrage'),
+        fontSize: 20,
+        fillStyle: '#000',
+        step: 1
+    });
+
+    btn.onclick = () => {
+        barrageController.getInstance().textInput( text.value );
+    }
+</script>
 
 </html>       
